@@ -1,0 +1,388 @@
+<!DOCTYPE html> <!-- indique que cette page est codée en HTML -->
+<html lang="en"> <!-- indique le début du code HTML et précise la langue utilisée dans la page -->
+
+<head>
+    <meta charset="UTF-8"> <!-- indique le type de codage utilisé, ici UTF-8-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapitre 2 - L'essentiel du HTML</title>
+    <!-- Inscrire ici les mots-clés participant au référencement du site -->
+</head>
+
+<body>
+    <h1>Titre de niveau 1 avec la balise &lt;h1&gt;&lt;/h1&gt;</h1>
+    <h2>Sous titre niveau 2 avec la balise &lt;h2&gt;&lt;/h2&gt;</h2>
+    <fieldset>
+        <h1 id="titre_h1">Titre de niveau 1</h1>
+        <h2>Titre de niveau 2</h2>
+        <h3>Titre de niveau 3</h3>
+        <h4>Titre de niveau 4</h4>
+        <h5>Titre de niveau 5</h5>
+        <h6>Titre de niveau 6</h6>
+    </fieldset><br>
+    <fieldset>
+        <p>Espace insécable '& nbsp;' exemple : 9 heures à 18 heures</p>
+        <!-- Espace insécable &nbsp; ou "alt" + 255 a pour but d'empêcher la coupure de mot en fin de ligne -->
+        <p>Ceci est un paragraphe, le texte est encadré des balises &lt;p&gt;&lt;/p&gt;</p>
+        <p>Paragraphe de texte ordinaire avec les balises &lt;p&gt;texte&lt;/p&gt;</p>
+        <p><small>Texte de type small</small> avec les balise &lt;small&gt;texte&lt;/small&gt;</p>
+        <p id="toto"><s>Texte barré</s> avec les balises &lt;s&gt;Texte barré&lt;s&gt;</p>
+        <p>Texte avec un <sup>exposant</sup> avec les balises &lt;sup&gt;exposant&lt;/sup&gt;</p>
+        <p>Unité de volume : m<sup>3</sup></p>
+        <p>Texte avec un <sub>indice</sub> avec les balises &lt;sub&gt;indice&lt;/sub&gt;</p>
+        <p>Formule de la molécule d'eau : H<sub>2</sub>O</p>
+        <p>Citation avec retrait, balises &lt;blockquote&gt;&lt;/blockquote&gt;</p>
+    </fieldset><br>
+    <fieldset>
+        <h4>La devise des Trois Mousquetaires</h4>
+        <blockquote cite="URI">
+            <p>Un pour tous, tous pour un !, avec balises &lt;blockquote&gt;...&lt;/blockquote&gt;</p>
+        </blockquote>
+        <p>Voici un trait de séparation horizontal avec la blise &lt;hr&gt;</p>
+        <p>
+            <hr>
+        </p>
+    </fieldset><br>
+    <fieldset>
+        <h4>Liens hypertextes</h4>
+        <p><a href="index.html" accesskey="a" title="accueil" target="_blank">Retour à la page d'accueil</a> avec les
+            balises &lt;a&gt;texte&lt;/a&gt;</p>
+        <p>&lt;a href="index.html" accesskey="a" title="accueil" target="_blank"&gt;Retour à la page d'accueil&lt;/a&gt;
+        </p>
+        <ul>
+            <li>href="index.html" : indique l'adresse de la page à afficher</li>
+            <li>accesskey="a" : ici permet d'activer le lien en appuyant sur "alt" + la touche "a"</li>
+            <li>title="accueil" : affiche un texte info-bulle au passage de la souris</li>
+            <li>target="_blank" : ici signifie ouvrir le lien dans une nouvelle fenêtre</li>
+            <ul><u>Autre valeurs possibles :</u>
+                <li>target="_blank" : ouvre dans une nouvelle fenêtre (a privilégier)</li>
+                <li>target="_parent" : affiche la page dans la fenêtre parente</li>
+                <li>target="_self" : affiche le lien dans la même fenêtre</li>
+                <li>target="_top" : revient à la fenêtre parente de plus haut niveau</li>
+            </ul>
+        </ul>
+    </fieldset><br>
+    <fieldset>
+        <h4>Lien hypertexte vers un endroit de la page</h4>
+        <a href="#titre_h1" accesskey="t" title="Retour titre niveau 1">Retour titre h1</a>
+        <p>&lt;a href="#titre_h1" accesskey="t" title="Retour titre niveau 1"&gt;Retour titre h1&lt;/a&gt;</p>
+        <p>Lien vers un endroit précis de la page courante :</p>
+        <a href="#toto">Retour vers texte barré de la page</a>
+    </fieldset><br>
+    <fieldset>
+        <h4>Lien vers une adresse mail</h4>
+        <a href="mailto:benoit.bremaud@laplateforme.io?subject=Essai de message&cc=bbd.concept@gmail.com" accesskey="m"
+            title="Envoyez un mail à Benoit">Envoyer un message</a>
+        <p>&lt;a href="mailto:benoit.bremaud@laplateforme.io ?subject=Essai de message&cc=bbd.concept@gmail.com"
+            accesskey="m" title="Envoyez un mail à Benoit"&gt;:Envoyer un message&lt;/a&gt;</p>
+        <ul>
+            <li>href="mailto:benoit.bremaud@laplateforme.io : adresse mail destinataire</li>
+            <li>?subject=Essai de message : objet du mail</li>
+            <li>&cc=bbd.concept@gmail.com" : destinataire en copie du message</li>
+        </ul>
+    </fieldset><br>
+    <fieldset>
+        <h3>Les listes</h3>
+        <h4>Liste à puces, balises &lt;ul&gt;&lt;/ul&gt;</h4>
+        <ul>
+            <li>element de la liste à puces, balises &lt;li&gt;&lt;/li&gt;</li>
+            <li>element de la liste à puces, balises &lt;li&gt;&lt;/li&gt;</li>
+        </ul>
+        <h4>Liste numérotée, balises &lt;ol&gt;&lt;/ol&gt;</h4>
+        <ol>
+            <li>element de la liste ordonnée, balises &lt;li&gt;&lt;/li&gt;</li>
+            <li>element de la liste ordonnée, balises &lt;li&gt;&lt;/li&gt;</li>
+        </ol>
+        <h4>Liste numérotée à partir de 5 :</h4>
+        <ol start="5">
+            <li>Nombre 5</li>
+            <li>Nombre 6</li>
+            <li>Nombre 7</li>
+        </ol>
+        <h4>Liste numérotée à l'envers :</h4>
+        <ol reversed>
+            <li>Element 1</li>
+            <li>Element 2</li>
+            <li value="888">Numéro chinois porte-bonheur</li>
+        </ol>
+        <h4>Liste numérotée avec des lettres :</h4>
+        <ol type="a">
+            <li>Element 1</li>
+            <li>Element 2</li>
+            <li>Element 3</li>
+        </ol>
+        <h4></h4>
+    </fieldset><br>
+    <fieldset>
+        <h3>Listes de définitions</h3>
+        <p>Permet de présenter une suite de termes accompagnés de leur définition</p>
+        <dl>
+            <dt>&lt;dl&gt;</dt>
+            <dd><em>description list</em> = liste de descriptions (encadre la liste contenant les termes et leur
+                définition)</dd>
+            <dt>&lt;dt&gt;</dt>
+            <dd><em>description list term</em> = un terme de la liste de desciptions</dd>
+            <dt>&lt;dd&gt;</dt>
+            <dd><em>description list description</em> = une description de la liste de descriptions (généralement
+                associée à un terme)</dd>
+        </dl>
+        <p>Utilisé aussi pour afficher des dialogues, la balise &lt;dt&gt; mentionnant le nom du personnage et la balise
+            &lt;dd&gt; encadrant sa réplique.</p>
+        <fieldset>
+            <legend><em>Exemple :</em></legend>
+            <h4>Chez le médecin</h4>
+            <dl>
+                <dt>Le patient</dt>
+                <dd>Docteur, je suis amnésique...</dd>
+                <dt>Le docteur</dt>
+                <dd>Ah ! Depuis quand ?</dd>
+                <dt>Le patient</dt>
+                <dd>Depuis quand, quoi ?</dd>
+            </dl>
+        </fieldset>
+    </fieldset>
+    <h3>
+        <hr>Tableaux (page 41)
+    </h3>
+    <p>Un tableau est délimité par les balises HTML <small><strong>&lt;table&gt; . . . &lt;/table&gt;</strong></small>
+    </p>
+    <p>Initialement, les bordures du tableau sont invisibles, il faut donc indiquer l'épaisseur de la bordure en pixels
+        à l'aide des deux méthodes suivantes</p>
+    <ul>
+        <li>en associant l'attribut <small><strong>border</strong></small>, en écrivant par exemple :
+            <small><strong>&lt;table border="1"&gt; . . . &lt;/table&gt;</strong></small></li>
+        <li>en définissant une bordure de tableau à l'interieur d'une feuille de styles (voir chapitre 5)</li>
+    </ul>
+    <p>Un tableau se construit de la façon suivante :</p>
+
+    <fieldset>
+        <h4>Création d'un tableau HTML</h4>
+        <fieldset>
+            <legend><em>Exemple :</em></legend>
+            <table border="1">
+                <caption>Titre_1</caption>
+                <tr>
+                    <th>Pays</th>
+                    <th>Capital</th>
+                </tr>
+                <tr>
+                    <td>France</td>
+                    <td>Paris</td>
+                </tr>
+                <tr>
+                    <td>Espagne</td>
+                    <td>Madrid</td>
+                </tr>
+            </table>
+            <dl>
+                <dt>&lt;table border="1"&gt;</dt>
+                <dd>Définition d'une bordure</dd>
+                <dt>&lt;tr&gt;...&lt;/tr&gt;</dt>
+                <dd><em>table row</em>, le tableau se construit ligne par ligne</dd>
+                <dt>&lt;th&gt;...&lt;/th&gt;</dt>
+                <dd><em>table header</em>, cellule de titre; texte mis en <strong>gras</strong> et centré</dd>
+                <dt>&lt;td&gt;...&lt;/td&gt;</dt>
+                <dd><em>table data</em>, définit les cellules du tableau</dd>
+                <dt>&lt;caption&gt; . . . &lt;/caption&gt;</dt>
+                <dd>Balises facultatives, placées sous la balise &lt;table&gt; permettent de définir un titre au tableau
+                    affiché au-dessus</dd>
+            </dl>
+        </fieldset>
+    </fieldset>
+
+    <h4>Fusionner des cellules</h4>
+    <fieldset>
+        <table border="1">
+            <caption>Titre_2</caption>
+            <tr>
+                <th colspan="2">Info Pays</th>
+            </tr>
+            <tr>
+                <th>Pays</th>
+                <th>Langue</th>
+            </tr>
+            <tr>
+                <td>Andorre</td>
+                <td>catalan</td>
+            </tr>
+            <tr>
+                <td rowspan="2">Canada</td>
+                <td>anglais</td>
+            </tr>
+            <tr>
+                <td>français</td>
+            </tr>
+        </table>
+        <dl>
+            <dt>&lt;th colspan="2"&gt;Info Pays&lt;/th&gt;</dt>
+            <dd>Fusion de 2 colonnes (horizontal)</dd>
+            <dt>&lt;th rowspan="2"&gt;Canada&lt;/th&gt;</dt>
+            <dd>Fusion de 2 lignes (vertical)</dd>
+        </dl>
+    </fieldset>
+
+    <h3>Insertion d'images (page 46)</h3>
+    <h4>Fomats d'images de base</h4>
+    <h4>Meilleur compression des images</h4>
+    <p>Principaux formats de nouvelle génération</p>
+    <dl>
+        <dt>WebP</dt>
+        <dd><em>Créé par Google à partir du format de compression vidéo VP8, fournit des fichiers d'extension .webp
+                environ 30% plus petits que le format JPEG</em></dd>
+        <dt>AVIF</dt>
+        <dd><em>AV1 Image File Format, réduit d'environ 50% la taille d'un fichier image par rapport au format JPEG</em>
+        </dd>
+        <dt>JPEG XL</dt>
+        <dd><em>A compléter</em></dd>
+    </dl>
+    <p>Il est possible de proposer un choix de plusieurs formats pour une même image, à l'aide de la balise
+        &lt;picture&gt;</p>
+
+    <h4>La balise image (page 48)</h4>
+    <p>Exemple de balise image &lt;img . . . &gt;</p>
+    <fieldset>
+        <p>&lt;img src="tux.png" alt="Le pingouin Tux" title="Tux est la mascotte de Linux"&gt;</p>
+    </fieldset>
+    <dl>
+        <dt>src</dt>
+        <dd><em>Attribut qui contient le nom du fichier ou le chemin + le nom du fichier image à afficher</em></dd>
+        <dt>alt</dt>
+        <dd><em>Doit indiquer de façon concise le contenu de l'image et sa fonction si elle en a une. Peut rester vide
+                alt=""</em></dd>
+        <dt>title</dt>
+        <dd><em>facultatif, permet d'affiche un texte au passage de la souris</em></dd>
+    </dl>
+    <h4>Dimensionner une image</h4>
+    <h4>Une icône sur l'onglet</h4>
+    <p>Utilisation de la balise &lt;link&gt; entre les balises &lt;head&gt; . . . &lt;/head&gt;</p>
+    <p>Syntaxe :</p>
+    <fieldset>
+        <p>&lt;link rel="icon" href="favicon.png" sizes="16x16"&gt;</p>
+    </fieldset>
+    <dl>
+        <dt>rel="icon"</dt>
+        <dd><em>Lien relatif à une icône</em></dd>
+        <dt>href="favicon.ico"</dt>
+        <dd><em>Attribut qui définit le nom du fichier ou le chemin + nom du fichier qui contient l'image servant
+                d'icône</em></dd>
+        <dt>sizes="16x16"</dt>
+        <dd><em>Attribut qui indique dans l'ordre la hauteur et la largeur de l'icône en pixels</em></dd>
+    </dl>
+    <h3>Contenus audio et vidéo</h3>
+    <p>A l'aide des balises spécifiques &lt;audio&gt; et &lt;video&gt; utilisent les ressources du navigateur</p>
+    <h4>Formats de fichiers audio et vidéo</h4>
+    <p>A compléter</p>
+    <h4>Insertion d'un son ou d'une vidéo</h4>
+    <p>Syntaxe</p>
+    <fieldset>
+        <p>&lt;audio src="mamusique.mp3"&gt;&lt;/audio&gt;</p>
+        <p>&lt;video src="monfilm.mp4"&gt;&lt;/video&gt;</p>
+    </fieldset>
+    <p>Syntaxe à utiliser pour les navigateurs n'interprétants pas ces balises</p>
+    <fieldset>
+        <p>&lt;audio src="mamusique.mp3"&gt;
+            Votre navigateur ne reconnait pas ce contenu audio.
+            &lt;/audio&gt;</p>
+        <p>&lt;video src="monfilm.mp4"&gt;
+            Votre navigateur ne reconnait pas ce contenu vidéo
+            &lt;/video&gt;</p>
+    </fieldset>
+    <dl><u>Attributs essentiels</u>
+        <dt><br>src="texte"</dt>
+        <dd><em>Indique la source du contenu, nom du fichier audio ou vidéo à lire</em></dd>
+    </dl>
+    <dl><u>Attributs optionnels</u>
+        <dt><br>controls</dt>
+        <dd>affiche les boutons de contrôle proposés par l'interface du navigateur (Volume, Pause, Reprise, Retour au
+            début, ...)</dd>
+        <dt>autoplay</dt>
+        <dd><em>Entraine un démarrage automatique du son ou du film dès l'affichage de la page.</em></dd>
+        <dt>preload</dt>
+        <dd><em>Permet d'anticiper ou non le chargement du contenu à l'ouverture de la page. Valeurs possibles :
+                <ul>
+                    <li>preload="none", le fichier ne se télécharge qu'à la lecture</li>
+                    <li>preload="metadata", seules quelques données associées au fichier sont téléchargées:taille,
+                        durée, liste de lecture, ...</li>
+                    <li>preload="auto", chargement automatique du fichier à lire</li>
+                </ul>
+            </em>
+        </dd>
+        <dt>loop</dt>
+        <dd><em>Sert à reboucler en permanance la diffusion</em></dd>
+        <dt>muted</dt>
+        <dd><em>Indique que le son doit être initialement désactivé</em></dd>
+    </dl>
+    <p>Autres Exemples</p>
+    <fieldset>
+        <p>&lt;audio src="mamusique.mp3" loop controls&gt;
+            Votre navigateur ne peut pas afficher ce contenu audio.
+            &lt;/audio&gt;</p>
+        <p>&lt;video src="monfilm.webm" poster="affiche.jpg" autoplay&gt;
+            Votre navigateur ne peut pas afficher ce contenu vidéo.
+            &lt;/video&gt;</p>
+    </fieldset>
+    <p>Une autre syntaxe existe, utilisant les balises &lt;source&gt;,
+        elles permettent de proposer plusieurs formats du même contenu à diffuser,
+        de l'optimal au plus courant, le navigateur prenant en compte le premier qu'il peut interpréter</p>
+    <p>Voici deux exemples</p>
+    <fieldset>Contenu vidéo proposé dans plusieurs types de codage
+        <p>&lt;video controls="controls"&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;source src="monfilm.webm"&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;source src="monfilm.mp4"&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;Votre navigateur ne peut pas afficher ce contenu vidéo.<br>
+            &lt;/video&gt;</p>
+    </fieldset>
+    <br>
+    <fieldset>Contenu audio proposé dans plusieurs types de codage
+        <p>&lt;audio&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;source src="mamusique.opus"&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;source src="mamusique.ogg"&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;source src="mamusique.mp3"&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;Votre navigateur ne peut pas afficher ce contenu audio.<br>
+            &lt;/audio&gt;</p>
+    </fieldset>
+
+    <h4>Pistes complémentaires pour les contenus audio et vidéo</h4>
+    <p>Une chanson ou un film proposé par une balise &lt;audio&gt; ou &lt;video&gt; est parfois accompagné d'une ou
+        plusieurs
+        piste(s) secondaire(s), constituée(s) en principe de textes : sous-titres, références d'auteurs, descriptions
+        complémentaires....
+    </p>
+    <p>Ces contenus sont alors fournis par la balise &lt;track&gt;,
+        incluse entre le début et la fin de la balise &lt;audio&gt; ou &lt;video&gt; associée.</p>
+    <p>Cette balise &lt;track&gt; possède obligatoirement les deux attributs <small>src=".."</small> (fichier contenant
+        le texte de cette piste)
+        et <small>label=".."</small> (titre de la piste) ainsi que d'autres attributs optionnels :
+    </p>
+    <fieldset><legend>Attributs optionnels</legend>
+        <dl>
+            <dt><br>kind="..."</dt>
+            <dd><em>Indique le type de contenu fourni par cette piste, avec comme valeurs possibles :
+                    <ul>
+                        <li><strong>subtitles</strong>, sous-titres, retranscription des paroles</li>
+                        <li><strong>captions</strong>, titres donnant des informations ponctuelles</li>
+                        <li><strong>chapters</strong>, titre des chapitres du film ou des morceaux de musique</li>
+                        <li><strong>metadata</strong>, données à traiter par programme</li>
+                    </ul>
+                </em></dd>
+            <dt><br>srclang="..."</dt>
+            <dd><em>Renseigne la langue de cette piste</em></dd>
+            <dt><br>default</dt>
+            <dd><em>S'applique lorsque la piste associée doit être automatiquement diffusée par le lecteur</em></dd>
+
+        </dl>
+    </fieldset>
+    <p>Une balise &lt;audio&gt; ou &lt;video&gt; peut contenir zéro, une ou plusieurs balise(s) &lt;track&gt;</p>
+
+
+    <!-- Ici un commentaire pour le créateur de la page -->
+
+    <!--
+        ET là un autre exemple de commentaire
+        sur plusieurs lignes cette fois, 
+        toujours à l'attention du programmeur.
+    -->
+
+</body>
+
+</html>
